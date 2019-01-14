@@ -30,43 +30,35 @@
             <li><a href="help.html">Huh?</a></li>
         </ul>
     </header>
-
-
-
-
-
-
-
     <div class="big-parts-container">
-
-
         <div class="part-of-banner" id="part-1">
             <h3>Personalia</h3>
 
             <div class="form-total">
                 <div class="form-left">
                     <input class="input-field" type="text" id="voornaam" value="" placeholder="Voornaam" maxlength="18"><br>
-                    <input class="input-field" type="text" id="achternaam" value="" placeholder="Achternaam" maxlength="25" /><br>
-                    <input class="input-field" type="text" id="adres" value="" placeholder="Adres" maxlength="50" /><br>
-                    <input class="input-field" type="text" id="postcode" value="" placeholder="Postcode" maxlength="6" /><br>
-                    <input class="input-field" type="text" id="woonplaats" value="" placeholder="Woonplaats" maxlength="20" /><br>
-
+                    <input class="input-field" type="text" id="achternaam" value="" placeholder="Achternaam"
+                           maxlength="25"/><br>
+                    <input class="input-field" type="text" id="adres" value="" placeholder="Adres" maxlength="50"/><br>
+                    <input class="input-field" type="text" id="postcode" value="" placeholder="Postcode" maxlength="6"/><br>
+                    <input class="input-field" type="text" id="woonplaats" value="" placeholder="Woonplaats"
+                           maxlength="20"/><br>
                 </div>
                 <div class="form-right">
-                    <input class="input-field" type="text" id="geboortedatum" onfocus="(this.type='date')" value="" placeholder="Geboortedatum"/><br>
-                    <input class="input-field" type="text" id="geboorteplaats" value="" placeholder="Geboorteplaats"/><br>
-                    <input class="input-field" type="text" id="telefoon" value="" placeholder="Telefoonnummer" maxlength="14"/><br>
-                    <input class="input-field" type="text" id="email"  value="" placeholder="E-mailadres" maxlength="30"/><br>
-                    <input class="input-field" type="text" id="nationaliteit"  value="" placeholder="Nationaliteit" maxlength="20"/>
+                    <input class="input-field" type="text" id="geboortedatum" onfocus="(this.type='date')" value=""
+                           placeholder="Geboortedatum"/><br>
+                    <input class="input-field" type="text" id="geboorteplaats" value=""
+                           placeholder="Geboorteplaats"/><br>
+                    <input class="input-field" type="text" id="telefoon" value="" placeholder="Telefoonnummer"
+                           maxlength="14"/><br>
+                    <input class="input-field" type="text" id="email" value="" placeholder="E-mailadres"
+                           maxlength="30"/><br>
+                    <input class="input-field" type="text" id="nationaliteit" value="" placeholder="Nationaliteit"
+                           maxlength="20"/>
                 </div>
             </div>
-
-
             <button onclick="formcheck(); return false" class="btn-1-1 button next">Volgende</button>
-
-
         </div>
-
 
         <div class="part-of-banner" id="part-2" style="display:none;">
             <div class="input_fields_wrap">
@@ -78,8 +70,6 @@
                         <input class="input-field" type="text" id="naam_instituut" value=""
                                placeholder="Naam instituut" maxlength="25"/><br>
                     </div>
-
-
                     <div class="form-right">
                         <input class="input-field" type="text" id="startdatum" onfocus="(this.type='date')" value=""
                                placeholder="Startdatum opleiding"/><br>
@@ -87,40 +77,18 @@
                                placeholder="Einddatum opleiding"/><br>
                         <input class="input-field" type="text" id="overige_informatie" value=""
                                placeholder="Overige informatie" maxlength="30"/><br>
-
                     </div>
-
-
-
                 </div>
-
-
-
-
-
-
-
-
-
-
             </div>
 
             <button class="btn-3 back">Vorige</button>
             <button class="btn-1 remove_field">Verwijder (laatste) opleiding</button>
-
             <button class="button add_field_button" id="opleiding_toevoegen" value="Opleiding toevoegen">Opleiding
                 toevoegen
             </button>
 
             <button class="btn-1-next button next">Volgende</button>
-
-
-
         </div>
-
-
-
-
 
         <div class="part-of-banner" id="part-3" style="display:none;">
             <div class="input_fields_wrap_ac">
@@ -144,36 +112,23 @@
                 </div>
             </div>
 
-
             <div class="button-container">
-                <button class="button add_field_button_ac" id="activiteit_toevoegen" value="Activiteit toevoegen">Activiteit
+                <button class="button add_field_button_ac" id="activiteit_toevoegen" value="Activiteit toevoegen">
+                    Activiteit
                     toevoegen
                 </button>
                 <button class="button button-cv-maken" value="CV maken">Maak mijn CV!</button>
                 <button class="button btn-1 remove_field">Verwijder (laatste) opleiding</button>
 
             </div>
-
-
-
         </div>
-
-
-
-
-
-
-        <script>
-            $('.next').click(function(){
+       <!-- <script>
+            $('.next').click(function () {
                 $(this).parent().hide().next().show();//hide parent and show next
             });
-            $('.back').click(function(){
+            $('.back').click(function () {
                 $(this).parent().hide().prev().show();//hide parent and show previous
             });
-        </script>
-
-
-
-
+        </script>-->
     </div> <!-- Einde main-container -->
 </div>

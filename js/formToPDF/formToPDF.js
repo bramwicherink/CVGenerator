@@ -6,7 +6,6 @@ $('#button').click(function() {
     doc.addImage(imgData, 'JPEG',0,0,210,297);
     doc.setTextColor(255,255,255);
 
-
     let voornaam = $('#voornaam').val();
     let achternaam = $('#achternaam').val();
     let adresgegevens = $('#adresgegevens').val();
@@ -19,7 +18,6 @@ $('#button').click(function() {
     doc.text(40, 27, voornaam);
     doc.setFontSize(10);
 
-
     doc.text(40, 32, achternaam);
     doc.text(40, 37, adresgegevens);
     doc.text(40, 42, telefoon);
@@ -28,16 +26,7 @@ $('#button').click(function() {
     doc.text(40, 57, geboorteplaats);
     doc.text(40, 67, nationaliteit);
 
-
-
-
-
     doc.save('test.pdf');
-
-
-
-
-
 });
 
 
