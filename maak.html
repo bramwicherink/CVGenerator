@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CVGen</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jspdf.min.js"></script>
+    <script src="jspdf.debug.js"></script>
+    <script src="js/templates_base64/template1.js"></script>
+    <script src="js/formToPDF/formToPDF.js"></script>
+    <script src="jQuery.js"></script>
+    <script src="localStorage.js"></script>
+    <script src="formCheck.js"></script>
+</head>
+<body>
+<div class="main-container-cvmaken">
+    <div class="part-of-banner">
+        <p>Dit is een testversie. Er kunnen nog gegevens wijzigen, verwijderd of toegevoegd worden.</p>
+    </div>
+    <header class="header-container">
+        <div class="main-text-logo"><a href="index.html"><p>CVGen.</p></a></div>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="maak.html">CV Maken</a></li>
+            <li><a href="help.html">Huh?</a></li>
+        </ul>
+    </header>
+
+
+
+
+
+
+
+    <div class="big-parts-container">
+
+
+        <div class="part-of-banner" id="part-1">
+            <h3>Personalia</h3>
+
+            <div class="form-total">
+                <div class="form-left">
+                    <input class="input-field" type="text" id="voornaam" value="" placeholder="Voornaam" maxlength="18"><br>
+                    <input class="input-field" type="text" id="achternaam" value="" placeholder="Achternaam" maxlength="25" /><br>
+                    <input class="input-field" type="text" id="adres" value="" placeholder="Adres" maxlength="50" /><br>
+                    <input class="input-field" type="text" id="postcode" value="" placeholder="Postcode" maxlength="6" /><br>
+                    <input class="input-field" type="text" id="woonplaats" value="" placeholder="Woonplaats" maxlength="20" /><br>
+
+                </div>
+                <div class="form-right">
+                    <input class="input-field" type="text" id="geboortedatum" onfocus="(this.type='date')" value="" placeholder="Geboortedatum"/><br>
+                    <input class="input-field" type="text" id="geboorteplaats" value="" placeholder="Geboorteplaats"/><br>
+                    <input class="input-field" type="text" id="telefoon" value="" placeholder="Telefoonnummer" maxlength="14"/><br>
+                    <input class="input-field" type="text" id="email"  value="" placeholder="E-mailadres" maxlength="30"/><br>
+                    <input class="input-field" type="text" id="nationaliteit"  value="" placeholder="Nationaliteit" maxlength="20"/>
+                </div>
+            </div>
+
+
+            <button onclick="formcheck(); return false" class="btn-1-1 button next">Volgende</button>
+
+
+        </div>
+
+
+        <div class="part-of-banner" id="part-2" style="display:none;">
+            <div class="input_fields_wrap">
+                <h3>Opleidingen</h3>
+                <div class="form-total">
+                    <div class="form-left">
+                        <input class="input-field" type="text" id="naam_opleiding" value=""
+                               placeholder="Naam opleiding" maxlength="15"><br>
+                        <input class="input-field" type="text" id="naam_instituut" value=""
+                               placeholder="Naam instituut" maxlength="25"/><br>
+                    </div>
+
+
+                    <div class="form-right">
+                        <input class="input-field" type="text" id="startdatum" onfocus="(this.type='date')" value=""
+                               placeholder="Startdatum opleiding"/><br>
+                        <input class="input-field" type="text" id="einddatum" onfocus="(this.type='date')" value=""
+                               placeholder="Einddatum opleiding"/><br>
+                        <input class="input-field" type="text" id="overige_informatie" value=""
+                               placeholder="Overige informatie" maxlength="30"/><br>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <button class="btn-3 back">Vorige</button>
+            <button class="btn-1 remove_field">Verwijder (laatste) opleiding</button>
+
+            <button class="button add_field_button" id="opleiding_toevoegen" value="Opleiding toevoegen">Opleiding
+                toevoegen
+            </button>
+
+            <button class="btn-1-next button next">Volgende</button>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="part-of-banner" id="part-3" style="display:none;">
+            <div class="input_fields_wrap_ac">
+                <h3>Werkervaring & vrijwilligerswerk</h3>
+                <div class="form-total">
+                    <div class="form-left">
+                        <input class="input-field" type="text" id="naam_ac" value=""
+                               placeholder="Naam werkervaring of activiteit" maxlength="22"><br>
+                        <input class="input-field" type="text" id="naam_instantie_ac" value=""
+                               placeholder="Naam werkgever of instantie" maxlength="25"/><br>
+                    </div>
+
+                    <div class="form-right">
+                        <input class="input-field" type="text" id="startdatum_ac" onfocus="(this.type='date')" value=""
+                               placeholder="Startdatum activiteit"/><br>
+                        <input class="input-field" type="text" id="einddatum_ac" onfocus="(this.type='date')" value=""
+                               placeholder="Einddatum activiteit"/><br>
+                        <input class="input-field" type="text" id="overige_informatie_ac" value=""
+                               placeholder="Overige informatie" maxlength="30"/><br>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="button-container">
+                <button class="button add_field_button_ac" id="activiteit_toevoegen" value="Activiteit toevoegen">Activiteit
+                    toevoegen
+                </button>
+                <button class="button button-cv-maken" value="CV maken">Maak mijn CV!</button>
+                <button class="button btn-1 remove_field">Verwijder (laatste) opleiding</button>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <script>
+            $('.next').click(function(){
+                $(this).parent().hide().next().show();//hide parent and show next
+            });
+            $('.back').click(function(){
+                $(this).parent().hide().prev().show();//hide parent and show previous
+            });
+        </script>
+
+
+
+
+    </div> <!-- Einde main-container -->
+</div>

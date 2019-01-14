@@ -1,0 +1,604 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat ExtraBold', sans-serif;
+    font-size: 42pt;
+    color: #FDFFFC;
+
+}
+
+h3 {
+    font-family: 'Montserrat SemiBold', sans-serif;
+    font-size: 36pt;
+    color: #FFFFFF;
+}
+p {
+    font-family: 'Montserrat Medium', sans-serif;
+    font-size: 13pt;
+    color: #FFFFFF;
+}
+/* Main container */
+.main-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    float: right;
+    flex-direction: column;
+    background-image: url("img/background2-cvmaker.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header */
+
+.header-container {
+    margin: 2%;
+    padding: 2%;
+}
+
+.main-text-logo p {
+    font-family: 'Montserrat ExtraBold', sans-serif;
+    font-size: 40px;
+    float: left;
+    position: absolute;
+    top: 10%;
+
+}
+
+.main-text-logo a {
+    text-decoration: none;
+    color: #FDFFFC;
+    -webkit-transition: ease-in-out 0.4s;
+}
+
+.main-text-logo a:hover {
+    color: #2EC4B6;
+    -webkit-transition: ease-in-out 0.4s;
+}
+
+
+
+/* Navigatie */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    list-style-type: none;
+
+
+}
+
+.navigation li {
+    margin: 0 20px 0 0;
+    flex-direction: column;
+
+
+}
+
+.navigation li a  {
+    text-decoration: none;
+    color: #FDFFFC;
+    -webkit-transition: ease-in-out 0.4s;
+
+}
+
+.navigation li a:hover {
+    color: #2EC4B6;
+    -webkit-transition: ease-in-out 0.4s;
+    list-style-type: none;
+}
+
+/* Splash container */
+
+.full-splash-container {
+    width: 98vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.full-splash-container h1 {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.full-splash-container p {
+    text-align: center;
+}
+
+.button-cv-maken {
+
+    background-color: #1AACD9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
+    color: #FFFFFF;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: ease-in-out 0.2s;
+
+
+}
+
+.button-cv-maken:hover {
+    background-position: left bottom;
+    color: #FFFFFF;
+    background-color: #137c9c;
+
+}
+
+/* Banner */
+
+.uitleg-title {
+    position: absolute;
+    top: 100%;
+}
+
+.big-parts-container {
+    display: flex;
+    float:left;
+    flex-direction: row;
+    width: 90%;
+    height: 100%;
+    margin: 60px;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+
+
+
+}
+
+.form-container button {
+    display: flex;
+    flex-direction: column;
+}
+.form-left {
+    display: flex;
+    width: 100%;
+    float:left;
+    flex-grow: 1;
+    flex-flow: wrap;
+    /* flex-flow: wrap; */
+}
+.form-right {
+    flex: 1;
+    float:right;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-flow: wrap;
+}
+
+
+.part-of-banner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 12px 13px 74px -26px rgba(0,0,0,0.6 );
+    -moz-box-shadow: 12px 13px 74px -26px rgba(0,0,0,0.6);
+    box-shadow: 12px 13px 74px -26px rgba(0,0,0,0.6);
+    -webkit-transition: ease-in-out 0.1s;
+
+
+}
+
+.part-of-banner h1 {
+    color: #1AACD9;
+}
+
+.part-of-banner p {
+    color: #1E2148;
+    font-family: 'Montserrat Light', sans-serif;
+
+}
+
+.part-of-banner h3 {
+    color: #1AACD9;
+}
+
+
+#part-before {
+    width: 70%;
+    height: 90%;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    float: left;
+}
+
+
+
+
+#part-1 {
+    width: 70%;
+    height: 90%;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    float:left;
+}
+
+#part-2 {
+
+    width: 70%;
+    height: 90%;
+    margin: 20px;
+    padding: 20px;
+
+
+
+}
+
+#part-3 {
+
+    width: 70%;
+    height: 90%;
+    margin: 20px;
+    padding: 20px;
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    * {
+        max-width: 100%;
+    }
+
+    .main-text-logo {
+        position: absolute;
+        top: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .part-of-banner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .big-parts-container {
+        flex-direction: column;
+        margin: 20px;
+        padding: 0;
+    }
+}
+
+/* CV MAKEN */
+
+.main-container-cvmaken {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    float: right;
+    flex-direction: column;
+    background-image: url("img/background2-cvmaker.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.input-field {
+    background-color: #daecef;
+    outline-style: none;
+    text-align: center;
+    color: #1E2148;
+    font-family: 'Montserrat Light', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    width: 20%;
+    height: 15px;
+    flex-grow: 1;
+    -webkit-transition: ease-in-out 0.5s;
+}
+
+
+
+.input-field a {
+    text-decoration: none;
+}
+
+.input-field:focus {
+    background-color: #FFFFFF;
+    color: #1AACD9;
+    border: 1px #1AACD9 solid;
+    -webkit-transition: ease-in-out 0.5s;
+}
+
+::placeholder {
+    color: #1E2148;
+    font-family: 'Montserrat Medium', sans-serif;
+}
+
+.button {
+    background-color: #1AACD9;
+    outline-style: none;
+    border: 0;
+    padding: 30px;
+    color: #FFFFFF;
+    font-family: 'Montserrat ExtraBold', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    width: 33%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+button {
+    flex-grow: 1;
+}
+
+.button-container {
+    width: 100%;
+    bottom: 0;
+}
+
+.button:hover {
+    background-color: #137c9c;
+    -webkit-transition: ease-in-out 0.3s;
+}
+
+
+.btn-1 {
+    background-color: #1AACD9;
+    -webkit-transition: ease-in-out 0.3s;
+    flex-grow: 1;
+    left:0;
+}
+
+
+.btn-1:hover {
+    background-color: #037003;
+    -webkit-transition: ease-in-out 0.3s;
+
+}
+
+.btn-1-1:hover {
+    background-color: #137c9c;
+}
+
+.btn-1-1 {
+    background-color: #1AACD9;
+    -webkit-transition: ease-in-out 0.3s;
+    flex-grow: 1;
+    width: 100%;
+    left:0;
+}
+
+.btn-1-next {
+    background-color: #1AACD9;
+    -webkit-transition: ease-in-out 0.3s;
+    flex-grow: 1;
+    width: 33%;
+    left: 67%;
+}
+
+.btn-2 {
+    background-color: purple;
+    bottom: 0;
+    left:33%;
+
+}
+
+.btn-3 {
+    left: 0;
+}
+
+.remove_field {
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    background-color: #F4473A;
+    -webkit-transition: ease-in-out 0.3s;
+}
+
+.remove_field:hover {
+    background-color: #f2291a;
+    -webkit-transition: ease-in-out 0.3s;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    width: 100%;
+    bottom: 0;
+
+
+}
+
+
+
+
+.add_field_button {
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 34%;
+    background-color: #037003;
+    -webkit-transition: ease-in-out 0.3s;
+}
+
+.add_field_button:hover {
+    background-color: #024f02;
+    -webkit-transition: ease-in-out 0.3s;
+}
+
+.extra-course {
+    overflow: hidden;
+    padding: 20px;
+    margin: 100px;
+}
+
+.extra-course a {
+    text-decoration: none;
+}
+
+.uitleg-div {
+    -webkit-transition: ease-in-out 0.5s;
+}
+
+.uitleg-div:hover {
+    transform: scale(1.08);
+    -webkit-transition: ease-in-out 0.2s;
+}
+
+.form-total {
+    margin: 100px;
+}
+
+/* Scroll animation */
+@-webkit-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+@-moz-keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+@keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+.scroll-btn {
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.scroll-btn > * {
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #7f8c8d;
+    color: #ffffff;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+    color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.scroll-btn .mouse {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 55px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: white;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+}
+
