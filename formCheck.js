@@ -10,3 +10,20 @@
 }
 
 */
+
+
+    // console.log(CV);
+
+
+    // voornaam: $('#voornaam').val(),
+    // achternaam: $('#achternaam').val(),
+    // adresgegevens: $('#adres').val(),
+    // postcode: $('#postcode').val(),
+    // woonplaats: $('#woonplaats').val(),
+    // telefoon: $('#telefoon').val(),
+    // email: $('#email').val(),
+    // geboortedatum: $('#geboortedatum').val(),
+    // geboorteplaats: $('#geboorteplaats').val(),
+    // nationaliteit: $('#nationaliteit').val(),
+
+

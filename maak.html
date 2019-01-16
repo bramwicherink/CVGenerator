@@ -27,7 +27,6 @@
         <ul class="navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="maak.html">CV Maken</a></li>
-            <li><a href="help.html">Huh?</a></li>
         </ul>
     </header>
     <div class="big-parts-container">
@@ -36,28 +35,28 @@
 
             <div class="form-total">
                 <div class="form-left">
-                    <input class="input-field" type="text" id="voornaam" value="" placeholder="Voornaam" maxlength="18"><br>
-                    <input class="input-field" type="text" id="achternaam" value="" placeholder="Achternaam"
+                    <input class="input-field part-1" type="text" id="voornaam" value="" placeholder="Voornaam" maxlength="18"><br>
+                    <input class="input-field part-1" type="text" id="achternaam" value="" placeholder="Achternaam"
                            maxlength="25"/><br>
-                    <input class="input-field" type="text" id="adres" value="" placeholder="Adres" maxlength="50"/><br>
-                    <input class="input-field" type="text" id="postcode" value="" placeholder="Postcode" maxlength="6"/><br>
-                    <input class="input-field" type="text" id="woonplaats" value="" placeholder="Woonplaats"
+                    <input class="input-field part-1" type="text" id="adres" value="" placeholder="Adres" maxlength="50"/><br>
+                    <input class="input-field part-1" type="text" id="postcode" value="" placeholder="Postcode" maxlength="6"/><br>
+                    <input class="input-field part-1" type="text" id="woonplaats" value="" placeholder="Woonplaats"
                            maxlength="20"/><br>
                 </div>
                 <div class="form-right">
-                    <input class="input-field" type="text" id="geboortedatum" onfocus="(this.type='date')" value=""
+                    <input class="input-field part-1" type="text" id="geboortedatum" onfocus="(this.type='date')" value=""
                            placeholder="Geboortedatum"/><br>
-                    <input class="input-field" type="text" id="geboorteplaats" value=""
+                    <input class="input-field part-1" type="text" id="geboorteplaats" value=""
                            placeholder="Geboorteplaats"/><br>
-                    <input class="input-field" type="text" id="telefoon" value="" placeholder="Telefoonnummer"
+                    <input class="input-field part-1" type="text" id="telefoon" value="" placeholder="Telefoonnummer"
                            maxlength="14"/><br>
-                    <input class="input-field" type="text" id="email" value="" placeholder="E-mailadres"
+                    <input class="input-field part-1" type="text" id="email" value="" placeholder="E-mailadres"
                            maxlength="30"/><br>
-                    <input class="input-field" type="text" id="nationaliteit" value="" placeholder="Nationaliteit"
+                    <input class="input-field part-1" type="text" id="nationaliteit" value="" placeholder="Nationaliteit"
                            maxlength="20"/>
                 </div>
             </div>
-            <button onclick="formcheck(); return false" class="btn-1-1 button next">Volgende</button>
+            <button onclick="addPersonalia();" class="btn-1-1 button next">Volgende</button>
         </div>
 
         <div class="part-of-banner" id="part-2" style="display:none;">
@@ -76,7 +75,7 @@
                         <input class="input-field" type="text" id="einddatum" onfocus="(this.type='date')" value=""
                                placeholder="Einddatum opleiding"/><br>
                         <input class="input-field" type="text" id="overige_informatie" value=""
-                               placeholder="Overige informatie" maxlength="30"/><br>
+                               placeholder="Status opleiding (afgerond, tot op heden, et cetera..)" maxlength="30"/><br>
                     </div>
                 </div>
             </div>
@@ -107,7 +106,7 @@
                         <input class="input-field" type="text" id="einddatum_ac" onfocus="(this.type='date')" value=""
                                placeholder="Einddatum activiteit"/><br>
                         <input class="input-field" type="text" id="overige_informatie_ac" value=""
-                               placeholder="Overige informatie" maxlength="30"/><br>
+                               placeholder="Status werkgever (tot op heden)" maxlength="30"/><br>
                     </div>
                 </div>
             </div>
