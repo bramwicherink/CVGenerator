@@ -63,6 +63,8 @@ $(document).ready(function () {
 
     $('.add_field_button').click(function () {
 
+        // Opleiding array aanmaken
+
         if (huidigeRij < maxRijen) {
             let opleiding = {
 
@@ -238,6 +240,7 @@ $(document).ready(function () {
 
         let rij = CV.opleidingen[0];
 
+        // Als het veld leeg is, dan....
         if (typeof rij !== "undefined") {
             doc.setFontSize(25);
             doc.text(40, 27, CV.personalia.voornaam);
@@ -275,6 +278,8 @@ $(document).ready(function () {
 
 
         }
+
+        // Voor iedere opleiding die toegevoegd wordt, laat 16 pixels tussen de verschillende opleidingen
         for (i = 0; i < CV.opleidingen.length; yPosVariable_NewLine+=16, i++) {
             rij = CV.opleidingen[i];
 
@@ -286,6 +291,7 @@ $(document).ready(function () {
             for(i = 0; i < CV.opleidingen.length; yPosVariable_NewCourseLine+=5, i++) {
                 yPosVariable_NewLine+=16;
             }
+            // x-coördinaat wordt bepaald door xPos, y-coördinaat wordt gedefinieerd door yPosVariable_NewLine
             doc.setFontSize(25);
             doc.text(xPos, yPosVariable_NewLine, rij.naamOpleiding);
             yPosVariable_NewLine++;
