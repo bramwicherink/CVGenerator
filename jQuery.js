@@ -135,7 +135,7 @@ $(document).ready(function () {
 
     $('.button-cv-maken').click(function () {
         let doc = new jsPDF();
-        doc.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+        doc.addImage(imgData, "JPEG", 0, 0, 210, 297);
         doc.setTextColor(0.7544, 0.4035, 0.0000, 0.5529);
         /*
                 let voornaam = $('#voornaam').val();
@@ -270,185 +270,182 @@ $(document).ready(function () {
         let i;
         let textElement = doc.text();
         let xPos = 110;
-        let yPos = 0;
-        let yPosVariable_NewLine = yPos + 27;
-        let yPosVariable_NewCourseLine = yPos + 5;
 
-        if (textElement) {
+        let yPos = 27;
 
 
-        }
+
 
         // Voor iedere opleiding die toegevoegd wordt, laat 16 pixels tussen de verschillende opleidingen
-        for (i = 0; i < CV.opleidingen.length; yPosVariable_NewLine+=16, i++) {
+        for (i = 0; i < CV.opleidingen.length; i++) {
             rij = CV.opleidingen[i];
 
             console.log(rij.naamOpleiding[i]);
             console.log(rij.naamOpleiding);
 
-            console.log("De xPos is " + xPos + "en de yPos variabele is: " + yPosVariable_NewLine);
+            console.log("De xPos is " + xPos + "en de yPos variabele is: " + yPos);
 
-            for(i = 0; i < CV.opleidingen.length; yPosVariable_NewCourseLine+=5, i++) {
-                yPosVariable_NewLine+=16;
-            }
-            // x-coördinaat wordt bepaald door xPos, y-coördinaat wordt gedefinieerd door yPosVariable_NewLine
+
+            // x-coördinaat wordt bepaald door xPos, y-coördinaat wordt gedefinieerd door yPos
             doc.setFontSize(25);
-            doc.text(xPos, yPosVariable_NewLine, rij.naamOpleiding);
-            yPosVariable_NewLine++;
+            doc.text(xPos, yPos, rij.naamOpleiding);
+            yPos = yPos + 5;
 
             doc.setFontSize(10);
-            doc.text(xPos, yPosVariable_NewLine, rij.naamInstituut);
-            yPosVariable_NewLine++;
-            doc.text(xPos, yPosVariable_NewLine, rij.startdatum);
-            yPosVariable_NewLine++;
-            doc.text(xPos, yPosVariable_NewLine, rij.einddatum);
-            yPosVariable_NewLine++;
-            doc.text(xPos, yPosVariable_NewLine, rij.overigeInformatie);
-            yPosVariable_NewLine++;
+            doc.text(xPos, yPos, rij.naamInstituut);
+            yPos = yPos + 5;
+            doc.text(xPos, yPos, rij.startdatum);
+            yPos = yPos + 5;
+            doc.text(xPos, yPos, rij.einddatum);
+            yPos = yPos + 5;
+            doc.text(xPos, yPos, rij.overigeInformatie);
+            yPos = yPos + 16;
 
         }
 
 
 
-    /*
-
-    doc.text(40, 27, voornaam);
-    doc.setFontSize(10);
-    doc.text(40, 32, achternaam);
-    doc.text(40, 37, adresgegevens);
-    doc.text(40, 42, telefoon);
-    doc.text(40, 47, email);
-    doc.text(40, 52, geboortedatum);
-    doc.text(40, 57, geboorteplaats);
-    doc.text(40, 62, nationaliteit);
-
-    doc.setFontSize(25);
-
-    doc.text(110, 27, naamOpleiding);
-    doc.setFontSize(10);
-    doc.text(110, 32, naamInstituut);
-    doc.text(110, 37, startdatum);
-    doc.text(110, 42, einddatum);
-    doc.text(110, 47, overigeInformatie);
-
-    doc.setFontSize(25);
-    doc.text(110, 60, naamOpleiding2);
-    doc.setFontSize(10);
-    doc.text(110, 65, naamInstituut2);
-    doc.text(110, 70, startdatum2);
-    doc.text(110, 75, einddatum2);
-    doc.text(110, 80, overigeInformatie2);
-
-    doc.setFontSize(25);
-    doc.text(110, 93, naamOpleiding3);
-    doc.setFontSize(10);
-    doc.text(110, 98, naamInstituut3);
-    doc.text(110, 103, startdatum3);
-    doc.text(110, 108, einddatum3);
-    doc.text(110, 113, overigeInformatie3);
-
-    doc.setFontSize(25);
-    doc.text(110, 126, naamOpleiding4);
-    doc.setFontSize(10);
-    doc.text(110, 131, naamInstituut4);
-    doc.text(110, 136, startdatum4);
-    doc.text(110, 141, einddatum4);
-    doc.text(110, 146, overigeInformatie4);
-
-    doc.setFontSize(25);
-    doc.text(110, 159, naamOpleiding5);
-    doc.setFontSize(10);
-    doc.text(110, 164, naamInstituut5);
-    doc.text(110, 169, startdatum5);
-    doc.text(110, 174, einddatum5);
-    doc.text(110, 179, overigeInformatie5);
-
-    doc.setFontSize(25);
-    doc.text(110, 192, naamOpleiding6);
-    doc.setFontSize(10);
-    doc.text(110, 197, naamInstituut6);
-    doc.text(110, 202, startdatum6);
-    doc.text(110, 207, einddatum6);
-    doc.text(110, 212, overigeInformatie6);
-
-    doc.setFontSize(25);
-    doc.text(110, 225, naamOpleiding7);
-    doc.setFontSize(10);
-    doc.text(110, 230, naamInstituut7);
-    doc.text(110, 235, startdatum7);
-    doc.text(110, 240, einddatum7);
-    doc.text(110, 245, overigeInformatie7);
-
-    doc.setFontSize(25);
-    doc.text(110, 258, naamOpleiding8);
-    doc.setFontSize(10);
-    doc.text(110, 263, naamInstituut8);
-    doc.text(110, 268, startdatum8);
-    doc.text(110, 273, einddatum8);
-    doc.text(110, 278, overigeInformatie8);
-
-    doc.setFontSize(25);
-    doc.text(5, 93, naamActiviteit);
-    doc.setFontSize(10);
-    doc.text(5, 98, naamInstantie);
-    doc.text(5, 103, startdatumActiviteit);
-    doc.text(5, 108, einddatumActiviteit);
-    doc.text(5, 113, overigeInformatieActiviteit);
-
-    doc.setFontSize(25);
-    doc.text(5, 126, naamActiviteit2);
-    doc.setFontSize(10);
-    doc.text(5, 131, naamInstantie2);
-    doc.text(5, 136, startdatumActiviteit2);
-    doc.text(5, 141, einddatumActiviteit2);
-    doc.text(5, 146, overigeInformatieActiviteit2);
-
-    doc.setFontSize(25);
-    doc.text(5, 159, naamActiviteit3);
-    doc.setFontSize(10);
-    doc.text(5, 164, naamInstantie3);
-    doc.text(5, 169, startdatumActiviteit3);
-    doc.text(5, 174, einddatumActiviteit3);
-    doc.text(5, 179, overigeInformatieActiviteit3);
-
-    doc.setFontSize(25);
-    doc.text(5, 192, naamActiviteit4);
-    doc.setFontSize(10);
-    doc.text(5, 197, naamInstantie4);
-    doc.text(5, 202, startdatumActiviteit4);
-    doc.text(5, 207, einddatumActiviteit4);
-    doc.text(5, 212, overigeInformatieActiviteit4);
-
-    doc.setFontSize(25);
-    doc.text(5, 225, naamActiviteit5);
-    doc.setFontSize(10);
-    doc.text(5, 230, naamInstantie5);
-    doc.text(5, 235, startdatumActiviteit5);
-    doc.text(5, 240, einddatumActiviteit5);
-    doc.text(5, 245, overigeInformatieActiviteit5);
-
-    doc.setFontSize(25);
-    doc.text(5, 258, naamActiviteit6);
-    doc.setFontSize(10);
-    doc.text(5, 263, naamInstantie6);
-    doc.text(5, 268, startdatumActiviteit6);
-    doc.text(5, 273, einddatumActiviteit6);
-    doc.text(5, 278, overigeInformatieActiviteit6);
-
-    */
 
 
-    doc.save('CV ' + CV.personalia.voornaam + '' + CV.personalia.achternaam + '.pdf');
+        /*
+
+        doc.text(40, 27, voornaam);
+        doc.setFontSize(10);
+        doc.text(40, 32, achternaam);
+        doc.text(40, 37, adresgegevens);
+        doc.text(40, 42, telefoon);
+        doc.text(40, 47, email);
+        doc.text(40, 52, geboortedatum);
+        doc.text(40, 57, geboorteplaats);
+        doc.text(40, 62, nationaliteit);
+
+        doc.setFontSize(25);
+
+        doc.text(110, 27, naamOpleiding);
+        doc.setFontSize(10);
+        doc.text(110, 32, naamInstituut);
+        doc.text(110, 37, startdatum);
+        doc.text(110, 42, einddatum);
+        doc.text(110, 47, overigeInformatie);
+
+        doc.setFontSize(25);
+        doc.text(110, 60, naamOpleiding2);
+        doc.setFontSize(10);
+        doc.text(110, 65, naamInstituut2);
+        doc.text(110, 70, startdatum2);
+        doc.text(110, 75, einddatum2);
+        doc.text(110, 80, overigeInformatie2);
+
+        doc.setFontSize(25);
+        doc.text(110, 93, naamOpleiding3);
+        doc.setFontSize(10);
+        doc.text(110, 98, naamInstituut3);
+        doc.text(110, 103, startdatum3);
+        doc.text(110, 108, einddatum3);
+        doc.text(110, 113, overigeInformatie3);
+
+        doc.setFontSize(25);
+        doc.text(110, 126, naamOpleiding4);
+        doc.setFontSize(10);
+        doc.text(110, 131, naamInstituut4);
+        doc.text(110, 136, startdatum4);
+        doc.text(110, 141, einddatum4);
+        doc.text(110, 146, overigeInformatie4);
+
+        doc.setFontSize(25);
+        doc.text(110, 159, naamOpleiding5);
+        doc.setFontSize(10);
+        doc.text(110, 164, naamInstituut5);
+        doc.text(110, 169, startdatum5);
+        doc.text(110, 174, einddatum5);
+        doc.text(110, 179, overigeInformatie5);
+
+        doc.setFontSize(25);
+        doc.text(110, 192, naamOpleiding6);
+        doc.setFontSize(10);
+        doc.text(110, 197, naamInstituut6);
+        doc.text(110, 202, startdatum6);
+        doc.text(110, 207, einddatum6);
+        doc.text(110, 212, overigeInformatie6);
+
+        doc.setFontSize(25);
+        doc.text(110, 225, naamOpleiding7);
+        doc.setFontSize(10);
+        doc.text(110, 230, naamInstituut7);
+        doc.text(110, 235, startdatum7);
+        doc.text(110, 240, einddatum7);
+        doc.text(110, 245, overigeInformatie7);
+
+        doc.setFontSize(25);
+        doc.text(110, 258, naamOpleiding8);
+        doc.setFontSize(10);
+        doc.text(110, 263, naamInstituut8);
+        doc.text(110, 268, startdatum8);
+        doc.text(110, 273, einddatum8);
+        doc.text(110, 278, overigeInformatie8);
+
+        doc.setFontSize(25);
+        doc.text(5, 93, naamActiviteit);
+        doc.setFontSize(10);
+        doc.text(5, 98, naamInstantie);
+        doc.text(5, 103, startdatumActiviteit);
+        doc.text(5, 108, einddatumActiviteit);
+        doc.text(5, 113, overigeInformatieActiviteit);
+
+        doc.setFontSize(25);
+        doc.text(5, 126, naamActiviteit2);
+        doc.setFontSize(10);
+        doc.text(5, 131, naamInstantie2);
+        doc.text(5, 136, startdatumActiviteit2);
+        doc.text(5, 141, einddatumActiviteit2);
+        doc.text(5, 146, overigeInformatieActiviteit2);
+
+        doc.setFontSize(25);
+        doc.text(5, 159, naamActiviteit3);
+        doc.setFontSize(10);
+        doc.text(5, 164, naamInstantie3);
+        doc.text(5, 169, startdatumActiviteit3);
+        doc.text(5, 174, einddatumActiviteit3);
+        doc.text(5, 179, overigeInformatieActiviteit3);
+
+        doc.setFontSize(25);
+        doc.text(5, 192, naamActiviteit4);
+        doc.setFontSize(10);
+        doc.text(5, 197, naamInstantie4);
+        doc.text(5, 202, startdatumActiviteit4);
+        doc.text(5, 207, einddatumActiviteit4);
+        doc.text(5, 212, overigeInformatieActiviteit4);
+
+        doc.setFontSize(25);
+        doc.text(5, 225, naamActiviteit5);
+        doc.setFontSize(10);
+        doc.text(5, 230, naamInstantie5);
+        doc.text(5, 235, startdatumActiviteit5);
+        doc.text(5, 240, einddatumActiviteit5);
+        doc.text(5, 245, overigeInformatieActiviteit5);
+
+        doc.setFontSize(25);
+        doc.text(5, 258, naamActiviteit6);
+        doc.setFontSize(10);
+        doc.text(5, 263, naamInstantie6);
+        doc.text(5, 268, startdatumActiviteit6);
+        doc.text(5, 273, einddatumActiviteit6);
+        doc.text(5, 278, overigeInformatieActiviteit6);
+
+        */
 
 
-});
+        doc.save('CV ' + CV.personalia.voornaam + '' + CV.personalia.achternaam + '.pdf');
 
-$('.next').click(function () {
-    $(this).parent().hide().next().show();//hide parent and show next
-});
-$('.back').click(function () {
-    $(this).parent().hide().prev().show();//hide parent and show previous
-});
+
+    });
+
+    $('.next').click(function () {
+        $(this).parent().hide().next().show();//hide parent and show next
+    });
+    $('.back').click(function () {
+        $(this).parent().hide().prev().show();//hide parent and show previous
+    });
 
 
 })
